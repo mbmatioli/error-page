@@ -145,7 +145,7 @@ a:first-child {
 	}
 
 	a,
-	button:first-child {
+	a:first-child {
 		margin: 0 0 1rem 0;
 		width: 100%;
 	}
@@ -170,5 +170,10 @@ a:first-child {
 		height: 100vh;
 		margin: 0;
 		width: 100vw;
+	}
+	a,
+	a:first-child {
+		margin: 0 0 1rem 0;
+		width: 100%;
 	}
 }
