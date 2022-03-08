@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 :root {
 	--primary-red: #ffdbdb;
 	--text-color: #111;
@@ -12,15 +19,16 @@ html,
 body,
 h1,
 p,
-a {
+a,
+button {
 	border: 0;
 	color: var(--text-color);
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	margin: 0;
 	padding: 0;
 	text-align: center;
 	text-decoration: none;
-	font-size: 16px;
+	background-color: white;
 }
 
 /* Background */
@@ -30,10 +38,16 @@ body {
 }
 
 .background-pattern {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	background-image: url(./background.svg);
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	height: 100vh;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 	width: 100vw;
 }
@@ -42,84 +56,111 @@ body {
 
 .container {
 	background-color: white;
-	border-radius: 8px;
-	box-shadow: 5px 10px 8px rgba(133, 133, 133, 0.3);
+	border-radius: 0.5rem;
+	-webkit-box-shadow: 4px 8px 4px rgba(68, 68, 68, 0.2);
+	box-shadow: 4px 8px 4px rgba(68, 68, 68, 0.2);
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
-	margin: 24px;
-	padding: 48px;
+	margin: 1.5rem;
+	padding: 3rem;
 }
 
 h1 {
-	font-size: 40px;
-	padding-bottom: 40px;
+	font-size: 2.5rem;
+	padding-bottom: 2.5rem;
 }
 
 img {
-	height: 160px;
-	padding-bottom: 40px;
+	height: 10rem;
+	padding-bottom: 2.5rem;
 }
 
 p {
 	color: var(--dark-grey);
-	font-size: 1.25em;
-	padding-bottom: 40px;
+	font-size: 1.1225rem;
+	padding-bottom: 2.5rem;
 }
 
 /* Buttons */
 
 .button-group {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 }
 
 a {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	border: solid 1px var(--dark-grey);
-	border-radius: 8px;
+	border-radius: 0.5rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
-	padding: 8px 12px;
+	padding: 0.5rem 0.75rem;
 }
 
 a:hover {
 	background-color: var(--light-grey);
+	-webkit-box-shadow: 2px 4px 4px rgba(68, 68, 68, 0.2);
+	box-shadow: 2px 4px 4px rgba(68, 68, 68, 0.2);
 }
 
 a:focus {
 	background-color: white;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }
 
 a:first-child {
-	margin-right: 16px;
+	margin-right: 1rem;
 }
 
 .icon {
-	height: 24px;
-	margin-right: 8px;
+	height: 1.5rem;
+	margin-right: 0.5rem;
 	padding: 0;
 }
 
 @media screen and (max-width: 475px) {
 	img {
-		height: 120px;
+		height: 7.5rem;
 	}
 
 	a,
-	a:first-child {
-		margin: 0 0 16px 0;
+	button:first-child {
+		margin: 0 0 1rem 0;
 		width: 100%;
 	}
 
 	.button-group {
+		-webkit-box-align: center;
+		-ms-flex-align: center;
 		align-items: center;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
 		justify-content: center;
 	}
 
 	.container {
-		padding: 16px;
+		padding: 1rem;
 		width: 100vw;
 	}
 }
